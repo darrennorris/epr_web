@@ -1,13 +1,14 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "epr_web"
+  title: "Ecologia de Paisagens com R"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - preface.qmd
 
 format:
   html:
@@ -15,5 +16,26 @@ format:
     css: styles.css
     toc: true
 
-editor: visual
+    contents:
+    - intro.qmd
+    - section: escala-met.qmd
+      contents:
+      - escala.qmd
+      - metricas.qmd
+    - section: codigo-R.qmd
+      contents:
+        - codigo-livro.qmd
+        - codigo-raster.qmd
+        - codigo-vector.qmd
+    - references.qmd
+    cover-image: cover.png
 
+bibliography: references.bib
+
+lang: pt-BR
+language:
+  label:
+    fig: "Figura "
+    tab: "Tabela "
+  ui:
+    chapter_name: "Capítulo "

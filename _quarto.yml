@@ -4,30 +4,33 @@ project:
 
 website:
   title: "Ecologia de Paisagens com R"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - preface.qmd
-
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Apresentação"
+        contents:
+          - index.qmd
+          - preface.qmd
+          - intro.qmd
+      - section: escala-met.qmd
+        contents:
+          - escala.qmd
+          - metricas.qmd
+      - section: codigo-R.qmd
+        contents:
+          - codigo-livro.qmd
+          - codigo-raster.qmd
+          - codigo-vector.qmd
+      - section: "Bibliografia"
+        contents:
+          - references.qmd
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-
-    contents:
-    - intro.qmd
-    - section: escala-met.qmd
-      contents:
-      - escala.qmd
-      - metricas.qmd
-    - section: codigo-R.qmd
-      contents:
-        - codigo-livro.qmd
-        - codigo-raster.qmd
-        - codigo-vector.qmd
-    - references.qmd
+    
     cover-image: cover.png
 
 bibliography: references.bib
